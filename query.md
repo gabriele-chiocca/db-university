@@ -40,3 +40,7 @@ SELECT id
 FROM university.departments;
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+SELECT `name`, `surname`, `phone`
+FROM university.teachers
+WHERE teachers.phone IS NULL;
