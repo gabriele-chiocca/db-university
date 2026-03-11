@@ -10,6 +10,9 @@ WHERE YEAR(date_of_birth) = 1990;
    WHERE courses.cfu >= 11;
 
 3. Selezionare tutti gli studenti che hanno più di 30 anni
+   SELECT `name`, `date_of_birth`
+   FROM university.students
+   WHERE timestampdiff(YEAR, date_of_birth, CURDATE()) > 30;
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
    laurea (286)
