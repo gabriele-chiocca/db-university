@@ -34,6 +34,16 @@ WHERE degrees.name = "Corso di Laurea in Economia"
    order by students.surname, students.name
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+SELECT \*
+FROM university.degrees
+INNER JOIN university.courses
+ON degrees.id = courses.degree_id
+INNER JOIN university.course_teacher
+ON courses.id = course_teacher.course_id
+INNER JOIN university.teachers
+ON course_teacher.teacher_id = teachers.id
+
 6. Selezionare tutti i docenti che insegnano nel Dipartimento di
    Matematica (54)
 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti
